@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fast-flights-cloud"
+version = "0.1.0"
+description = "fast-flights integration that doesn't get blocked: same get_flights() and Flights objects, fetched by a hosted Google Flights API."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "AutomationNation" }]
+keywords = ["fast-flights", "google flights", "google flights api", "flights", "airfare", "travel", "scraper"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = ["fast-flights>=3.1", "requests>=2.20", "typing_extensions>=4.0"]  # fast-flights 3.1 imports typing_extensions without declaring it
+
+[project.urls]
+Homepage = "https://github.com/retracn/fast-flights-cloud"
+Guide = "https://retracn.github.io/automationnation-actors/guides/google-flights-api/"
+Issues = "https://github.com/retracn/fast-flights-cloud/issues"
+
+[tool.setuptools]
+packages = ["fast_flights_cloud"]
